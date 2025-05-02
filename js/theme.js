@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggleBtn.addEventListener("click", () => {
       if (htmlElement.classList.contains("dark")) {
         htmlElement.classList.remove("dark")
-        localStorage.setItem("theme", "")
+        htmlElement.classList.add("light")
+        localStorage.setItem("theme", "light")
       } else {
+        htmlElement.classList.remove("light")
         htmlElement.classList.add("dark")
         localStorage.setItem("theme", "dark")
       }
